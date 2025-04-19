@@ -1,0 +1,31 @@
+.work-card{
+    display: flex;
+    row-gap: 3px;
+    flex-direction: row;
+    width: inherit;
+    justify-content: space-between;
+    color: black;
+    background: #ffffff;
+    border-radius: 7px;
+    margin-left: 10px;
+    padding-right: 3px;
+    margin-bottom: 8px;
+
+}
+.first-element{
+    width: 290px;
+    text-align: left;
+    margin-left: 10px;
+}
+p{
+    font-size: 1.5em;
+}
+.btn{
+    background-color: red;
+    width: 100px;
+    height: 50px;
+    margin: auto 0;
+    padding: 11px;
+    color: aliceblue;
+    font-size: 1.5em;
+}

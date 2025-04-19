@@ -1,0 +1,22 @@
+input{
+    display: inline;
+    height: 45px;
+    font-size: 1.5em;
+    margin: 10px;
+    font-weight: lighter;
+}
+.div{
+        display: flex;
+        flex-direction: row;
+        width: inherit;
+        justify-content: space-between;
+}
+button{
+    background-color: green;
+    width: 100px;
+    height: 50px;
+    margin: auto ;
+    padding: 11px;
+    color: aliceblue;
+    font-size: 1.5em;
+}
