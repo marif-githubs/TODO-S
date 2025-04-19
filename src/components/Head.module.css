@@ -1,0 +1,21 @@
+.head_pre_btn{
+float: right;
+height: inherit;
+width: 70px;
+margin-left: 10px;
+}
+.head_nex_btn{
+    float: left;
+    height: inherit;
+    width: 70px;
+}
+.div{
+    display: flex;
+    justify-content: space-between;
+}
+h1{
+    font-size: 3.2em;
+    line-height: 1;
+    margin: 15px;
+    flex-grow: 1;
+}

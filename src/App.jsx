@@ -1,4 +1,5 @@
 import './App.css'
+import { Head } from './components/Head.jsx'
 import Workcard from './components/Workcard.jsx'
 import Inputfields from './components/Inputfields.jsx'
 import WelcomeMessage from './components/WelcomeMessage.jsx'
@@ -21,9 +22,9 @@ function App() {
 
   return (
     <>
-      <div>
-        <h1>TODO LIST</h1>
-        <Inputfields list={todolist} handleAddTodo={(newlist) => setTodoList(newlist)}/>
+      <div >
+        <Head />
+        <Inputfields list={todolist} handleAddTodo={(newlist) => setTodoList(newlist)} />
         {todolist.length === 0 && <WelcomeMessage></WelcomeMessage>}
         <Workcard items={todolist} onDeleteTodo={(item) => handleDeleteTodo(item)}></Workcard>
       </div>
