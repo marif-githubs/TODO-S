@@ -4,6 +4,7 @@ import Workcard from './components/Workcard.jsx'
 import Inputfields from './components/Inputfields.jsx'
 import WelcomeMessage from './components/WelcomeMessage.jsx'
 import { useState } from 'react'
+import { DataProvider } from './store/data.jsx'
 
 function App() {
 
@@ -21,14 +22,12 @@ function App() {
   }
 
   return (
-    <>
-      <div >
-        <Head />
-        <Inputfields list={todolist} handleAddTodo={(newlist) => setTodoList(newlist)} />
-        {todolist.length === 0 && <WelcomeMessage></WelcomeMessage>}
-        <Workcard items={todolist} onDeleteTodo={(item) => handleDeleteTodo(item)}></Workcard>
-      </div>
-    </>
+    <DataProvider>
+      <Head />
+      <Inputfields list={todolist} handleAddTodo={(newlist) => setTodoList(newlist)} />
+      {todolist.length === 0 && <WelcomeMessage></WelcomeMessage>}
+      <Workcard></Workcard>
+    </DataProvider>
   )
 }
 
