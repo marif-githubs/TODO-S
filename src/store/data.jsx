@@ -33,9 +33,9 @@ export const DataProvider = ({ children }) => {
             body: JSON.stringify(item),
         })
             .then((res) => res.json())
-            .then((data) => {
-                if (data) {
-                    dispatch({ type: "ADD_TODO", payload: data });
+            .then((res) => {
+                if (res.status === "success") {
+                    dispatch({ type: "ADD_TODO", payload: res.data });
                 }
             });
     };
@@ -46,9 +46,10 @@ export const DataProvider = ({ children }) => {
         })
             .then((res) => res.json())
             .then((data) => {
-                console.log(data);
+                if (data.status === "success") {
+                    dispatch({ type: "DELETE_TODO", payload: data.data });
+                }
             });
-        dispatch({ type: "DELETE_TODO", payload: id });
     };
 
 
